@@ -11,5 +11,13 @@ public class MultiThreadingByRunnable implements Runnable{
     @Override
     public void run() {
         log.info("This class implements the runnable interface");
+        for(int i = 0; i <5; i++) {
+            System.out.println(i);
+            try {
+                Thread.sleep(1000);
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            }
+        }
     }
 }

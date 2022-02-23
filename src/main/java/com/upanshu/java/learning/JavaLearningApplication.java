@@ -7,6 +7,9 @@ import com.upanshu.java.learning.generics.animalKingdom.PrintAnimal;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
+import java.util.ArrayList;
+import java.util.List;
+
 @SpringBootApplication
 public class JavaLearningApplication {
 
@@ -24,6 +27,21 @@ public class JavaLearningApplication {
 
 		Printer<Double> printFloat = new Printer<>(10.01);
 		printFloat.printThis();
+
+		List<Integer> integerList = new ArrayList<>();
+		integerList.add(1);
+		printList(integerList);
+
+		List<String> stringList = new ArrayList<>();
+		stringList.add("hehe");
+		printList(stringList);
+	}
+
+	/// <?> is a wildcard which means that the List is of generic type
+	private static void printList(List<?> myList) {
+		for (Object o : myList) {
+			System.out.println(o);
+		}
 	}
 
 }

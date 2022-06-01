@@ -13,5 +13,4 @@ public class PersonOne implements Person {
         System.out.println("I am person one");
     }
 
-
 }

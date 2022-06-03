@@ -11,12 +11,18 @@ public class Main {
         ThreadJoining thread5 = new ThreadJoining();
 
         //Thread with .join will execute before all the other threads. Once it finishes executing then other threads will execute
-        thread1.start();
-        thread1.join();
-        thread2.start();
-        thread2.join();
+//        thread1.start();
+//        thread1.join();
+//        thread2.start();
+//        thread2.join();
+        thread3.setPriority(3);
+        thread4.setPriority(2);
+        thread5.setPriority(1);
         thread3.start();
         thread4.start();
         thread5.start();
+
+        // running thread in sequence
+
     }
 }
